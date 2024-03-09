@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG 9.4</title>
+</head>
+<body>
+    <script>
+        var rng = parseInt(Math.random() *1001);
+        var rngtxt = "Randomly Generated Number: ";
+        var txt = rngtxt.concat(rng);
+        document.write(txt + "<br><br>");
+
+        var ones = rng % 10;
+        var tens = parseInt((((rng % 100) /10)*10) - ones); /* Math.floor((rng % 100) /10) */
+        var hundreds = parseInt(((rng/100)*100) - (tens + ones)); /* Math.floor(rng/100) */
+
+        document.write(`Breakdown: ${hundreds}, ${tens}, ${ones} <br><br>`);
+
+        var d8 = new Date ();
+        document.write(d8);
+    </script>
+</body>
+</html>
